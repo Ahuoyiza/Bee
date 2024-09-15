@@ -72,27 +72,27 @@ Bee was designed to address key concerns for decentralized financial application
 
 1. **Clone the repository**:
 
-   \```
-   git clone https://github.com/your-repo/bee-payment-processor.git
-   \```
+   ```
+   git clone https://github.com/Ahuoyiza/Bee.git
+   ```
 
 2. **Navigate to the project folder**:
 
-   \```
+   ```
    cd bee-payment-processor
-   \```
+   ```
 
 3. **Install dependencies**:
 
-   \```
+   ```
    npm install
-   \```
+   ```
 
 4. **Run the backend server**:
 
-   \```
+   ```
    node server.js
-   \```
+   ```
 
 ### Submodule Setup (bee-dashboard)
 
@@ -102,33 +102,33 @@ The `bee-dashboard` is a **submodule** that provides the frontend interface for 
 
 1. **Initialize the submodule**:
 
-   \```
+   ```
    git submodule init
-   \```
+   ```
 
 2. **Update the submodule**:
 
-   \```
+   ```
    git submodule update
-   \```
+   ```
 
 3. **Navigate to the `bee-dashboard` folder**:
 
-   \```
+   ```
    cd bee-dashboard
-   \```
+   ```
 
 4. **Install dependencies**:
 
-   \```
+   ```
    npm install
-   \```
+   ```
 
 5. **Run the dashboard locally**:
 
-   \```
+   ```
    npm start
-   \```
+   ```
 
 ### Testing with `bee-dashboard`
 
@@ -149,19 +149,19 @@ Use the `bee-dashboard` to test how the integration with the Bee payment process
 **Description**: Creates a Verifiable Credential for a customer.
 
 **Request**:
-\```json
+```json
 {
   "customerName": "John Doe",
   "customerDID": "did:example:123456789"
 }
-\```
+```
 
 **Response**:
-\```json
+```json
 {
   "vc": { ... }  // Verifiable Credential object
 }
-\```
+```
 
 ### 2. Request Payment Quotes
 
@@ -170,16 +170,16 @@ Use the `bee-dashboard` to test how the integration with the Bee payment process
 **Description**: Fetches quotes from multiple PFIs for a currency exchange transaction.
 
 **Request**:
-\```json
+```json
 {
   "amount": 100,
   "fromCurrency": "USD",
   "toCurrency": "KES"
 }
-\```
+```
 
 **Response**:
-\```json
+```json
 [
   {
     "pfi": "AquaFinance Capital",
@@ -194,7 +194,7 @@ Use the `bee-dashboard` to test how the integration with the Bee payment process
     "toCurrency": "KES"
   }
 ]
-\```
+```
 
 ### 3. Initiate Payment
 
@@ -203,22 +203,22 @@ Use the `bee-dashboard` to test how the integration with the Bee payment process
 **Description**: Initiates a payment and applies a 2% transaction fee.
 
 **Request**:
-\```json
+```json
 {
   "customerId": "cust1",
   "amount": 100,
   "currency": "USD"
 }
-\```
+```
 
 **Response**:
-\```json
+```json
 {
   "transactionId": "txn1",
   "totalAmount": 102,
   "status": "pending"
 }
-\```
+```
 
 ### 4. Submit Feedback
 
@@ -227,20 +227,20 @@ Use the `bee-dashboard` to test how the integration with the Bee payment process
 **Description**: Allows customers to submit feedback after a transaction.
 
 **Request**:
-\```json
+```json
 {
   "transactionId": "txn1",
   "rating": 5,
   "comments": "Great service!"
 }
-\```
+```
 
 **Response**:
-\```json
+```json
 {
   "message": "Feedback submitted"
 }
-\```
+```
 
 ### 5. Fetch Customers
 
@@ -249,7 +249,7 @@ Use the `bee-dashboard` to test how the integration with the Bee payment process
 **Description**: Fetches a list of all registered customers.
 
 **Response**:
-\```json
+```json
 [
   {
     "id": "cust1",
@@ -264,7 +264,7 @@ Use the `bee-dashboard` to test how the integration with the Bee payment process
     "customerDID": "did:example:987654321"
   }
 ]
-\```
+```
 
 ### 6. Fetch Transactions
 
@@ -273,7 +273,7 @@ Use the `bee-dashboard` to test how the integration with the Bee payment process
 **Description**: Fetches a list of all transactions.
 
 **Response**:
-\```json
+```json
 [
   {
     "id": "txn1",
@@ -290,7 +290,7 @@ Use the `bee-dashboard` to test how the integration with the Bee payment process
     "status": "pending"
   }
 ]
-\```
+```
 
 ---
 
