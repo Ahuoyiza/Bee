@@ -1,0 +1,3 @@
+[submodule "bee-dashboard-sub"]
+	path = bee-dashboard-sub
+	url = https://github.com/Ahuoyiza/bee-dashboard.git
